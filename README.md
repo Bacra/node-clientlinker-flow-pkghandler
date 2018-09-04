@@ -28,19 +28,19 @@ npm i clientlinker-flow-pkghandler --save
 ```javascript
 var clientlinker = require('clientlinker');
 var linker = clientlinker({
-	flows: ['pkghandler'],
-	clients: {
-		client: {
-			pkghandler: 'clientlinker-flow-confighandler-test/lib/methods'
-		}
-	}
+  flows: ['pkghandler'],
+  clients: {
+    client: {
+      pkghandler: 'clientlinker-flow-confighandler-test/lib/methods'
+    }
+  }
 });
 
 linker.flow('pkghandler', require('clientlinker-flow-pkghandler'));
 
 // use
 linker.run('client.method', null, {id: 13})
-	.then(function(){});
+  .then(function(){});
 ```
 
 
