@@ -12,6 +12,7 @@ exports = module.exports = function pkghandler(runtime, callback)
 
 	if (handler)
 	{
+		if (typeof callback == 'object') callback = callback.toFuncCallback();
 		return handler(runtime.query, runtime.body, callback, runtime.options);
 	}
 	else
